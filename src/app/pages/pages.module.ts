@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 // mis modulos
 import { SharedModule } from './../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
+import { NgChartsModule } from 'ng2-charts';
 
 // mis componentes
 import { Grafica1Component } from './grafica1/grafica1.component';
@@ -27,7 +28,8 @@ import { ProgressComponent } from './progress/progress.component';
     SharedModule,
     AppRoutingModule,
     FormsModule,
-    ComponentsModule
+    ComponentsModule,
+    NgChartsModule
   ],
   exports:[
     ProgressComponent,
