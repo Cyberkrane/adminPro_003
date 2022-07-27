@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { ChartData, ChartType, Color } from 'chart.js';
+import { Component, Input } from '@angular/core';
+import { ChartData } from 'chart.js';
+
 
 @Component({
   selector: 'app-grafica1',
@@ -8,16 +9,25 @@ import { ChartData, ChartType, Color } from 'chart.js';
 })
 export class Grafica1Component {
 
-  public doughnutChartLabels: string[] = [ 'Download Sales', 'In-Store Sales', 'Mail-Order Sales' ];
-  public doughnutChartData: ChartData<'doughnut'> = {
-    labels: this.doughnutChartLabels,
+  lables1 : string[] =  [ 'pan', 'gaseosas', 'tacos' ];
+  data1: ChartData<'doughnut'> = {
+    labels: this.lables1,
     datasets: [
-      { data: [ 350, 450, 100 ] },
-      { data: [ 50, 150, 120 ] },
-      { data: [ 250, 130, 70 ] }
+      { data: [ 170, 375, 954 ],
+        backgroundColor: [ 'greenyellow', 'green', 'chocolate' ],
+        hoverBackgroundColor: [ '#6857E6', '#009FEE', '#F02059' ]
+      }
     ]
   };
-  public doughnutChartType: ChartType = 'doughnut';
- 
 
+  lables2 : string[] =  [ 'bizcochuelo', 'cafe', 'galletitas' ];
+  data2: ChartData<'doughnut'> = {
+    labels: this.lables2,
+    datasets: [
+      { data: [ 560, 580, 190 ],
+        backgroundColor: [ '#B45F04', '#013ADF', '#04B404' ],
+        hoverBackgroundColor: [ '#DBA901', '#2E64FE', '#58FA58' ]
+      }
+    ]
+  };
 }
